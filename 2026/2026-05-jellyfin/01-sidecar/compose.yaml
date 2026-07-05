@@ -12,7 +12,7 @@ services:
     container_name: jellyfin-ts
     hostname: jellyfin
     environment:
-      - "TS_AUTHKEY=${TS_AUTHKEY}"
+      - "TS_AUTHKEY=tskey-auth-kmi4zkuk3D11CNTRL-uovfQVjVd7jwyerpornK7j8XV7sEAmbJ"
       - TS_STATE_DIR=/var/lib/tailscale
       - TS_SERVE_CONFIG=/config/serve.json
     volumes:
@@ -36,5 +36,5 @@ services:
     volumes:
       - "/mnt/appdata/jellyfin/config:/config"
       - "/mnt/appdata/jellyfin/cache:/cache"
-      - "/mnt/media:/media:ro"
+      - "/home/noahn/Jellyfin Server Media:/media:ro"
     restart: unless-stopped
